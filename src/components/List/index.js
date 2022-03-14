@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 
 import {AppContext} from '../../AppContext'
 
@@ -8,21 +8,21 @@ import {Wapper} from './List.styles'
 
 const List = () => {
 
-    const {Lists , Filter} = useContext(AppContext)
-    let Filtered = [...Lists]
+    const {List, Filter} = useContext(AppContext)
+    let Filtered = [...List]
 
     switch(Filter){
         case "all":
-            Filtered = [...Lists];
+            Filtered = [...List];
             break;
         case "completed":
-            Filtered = Lists.filter(List => List.completed)
+            Filtered = List.filter(List => List.completed)
             break;
         case "uncompleted":
-            Filtered = Lists.filter(List => !List.completed)
+            Filtered = List.filter(List => !List.completed)
             break;    
         default:
-            Filtered = [...Lists]
+            Filtered = [...List]
             break;
     }
 

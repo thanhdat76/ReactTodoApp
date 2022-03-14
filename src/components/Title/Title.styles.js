@@ -4,6 +4,7 @@ export const Text = styled.div`
     text-align: center;
     margin-bottom: 20px;
     h1{
+        font-family: Comic Sans MS;
         font-size: var(--fontSuperBig);
         color: var(--title-color);
 

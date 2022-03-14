@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wapper = styled.li`
-    background-color: var(--primary-color);
+    background-color: rgb(0, 150, 136);
     padding: 4px 20px 5px 30px;
     border-radius: 10px;
     display: flex;
@@ -13,6 +13,10 @@ export const Wapper = styled.li`
         text-transform: capitalize;
         flex: 1 1;
     }
+    ${'' /* .task-done{
+        opacity: 0.5;
+        text-decoration: line-through;
+    } */}
 `
 export const Button = styled.button`
     width: 40px;

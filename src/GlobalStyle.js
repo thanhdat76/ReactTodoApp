@@ -44,4 +44,8 @@ export const GlobalStyle = createGlobalStyle`
     .active{
         background-color: #69bec8;
     }
+    .task-done{
+        opacity: 0.5;
+        text-decoration: line-through;
+    }
 `

@@ -14,7 +14,7 @@ const Task = ({id, title, completed}) =>{
     const {handleDelete, handleEdit, toggleDone} = useGlobalContext();
 
     return (
-        <Wapper>
+        <Wapper className = {completed ? "task-done" : ""}>
             <p>{title}</p>
             <Button onClick={()=>toggleDone(id)}>
                 {completed ? <MdCheckBox/> : <MdCheckBoxOutlineBlank/>}

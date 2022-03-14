@@ -12,4 +12,9 @@ export const Wapper = styled.ul`
     @media screen and (max-width: 768px) {
         padding: 0 6px 0 0;
     }
+    h3{
+
+        font-family: Comic Sans MS;
+        color: black;
+    }
 `

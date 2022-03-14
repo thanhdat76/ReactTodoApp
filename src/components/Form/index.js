@@ -10,7 +10,7 @@ import useGlobalContext from '../../hooks/useGlobalContext'
 
 const Form = () => {
 
-    const {Lists, setLists, isEditing, inputRef, editId, setIsEditing, inputValue, setInputValue, fetchList} = useGlobalContext();
+    const {List, setList, isEditing, inputRef, editId, setIsEditing, inputValue, setInputValue, fetchList} = useGlobalContext();
     
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,11 +19,11 @@ const Form = () => {
             alert("Please enter values");
         }
         else if (isEditing) {
-            setLists(Lists.map(task => {
+            setList(List.map(task => {
                     return task.id === editId ? {...task, title: inputValue} : task
                 })
             );
-            const taskEdit = Lists.find(task => task.id === editId);
+            const taskEdit = List.find(task => task.id === editId);
             taskEdit.title = inputValue;
             setIsEditing(false)
             setInputValue('')
